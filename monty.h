@@ -77,7 +77,7 @@ typedef struct line
  */
 typedef struct meta_s
 {
-	char *buf;
+	char *buffer;
 	stack_t *stack;
 	FILE *file;
 } meta_t;
