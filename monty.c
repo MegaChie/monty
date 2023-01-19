@@ -3,7 +3,7 @@
  * main - start here
  * @argc: argument count (integer variable)
  * @argv: argument vector (char pointer)
- * Retuen: exit status
+ * Return: exit status
  */
 int main(int argc, char *argv[])
 {
