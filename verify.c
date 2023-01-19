@@ -2,7 +2,9 @@
 arg_t arg = {0, 0};
 
 /**
- * 
+ * commentCheck - check code.
+ * @line: struct variable
+ * Return: true or false
  */
 bool commentCheck(line_t line)
 {
@@ -20,7 +22,9 @@ bool commentCheck(line_t line)
 }
 
 /**
- * 
+ * argumentCheck - check code.
+ * @token: char pointer
+ * Return: false ort true
  */
 bool argumentCheck(char *token)
 {
@@ -45,7 +49,10 @@ bool argumentCheck(char *token)
 }
 
 /**
- * 
+ * pushCheck - check code.
+ * @line: struct variable
+ * @meta: struct pointer
+ * @opcode: char pointer
  */
 void pushCheck(line_t line, meta_t *meta, char *opcode)
 {
