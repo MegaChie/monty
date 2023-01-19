@@ -116,16 +116,13 @@ void pstr(stack_t **stack, unsigned int nline)
 
 	temp = *stack;
 	(void)nline;
+	/* starts at the top */
 	while (temp)
 	{
 		if (temp->n == 0)
-		{
 			break;
-		}
 		if (_isalpha(temp->n) == 0)
-		{
 			break;
-		}
 		c = temp->n;
 		printf("%c", c);
 		result[index] += c;
