@@ -6,9 +6,9 @@ void push(stack_t **stack, unsigned int nline)
 {
 	stack_t *new;
 
-	if (stack == 0)
+	if (stack == NULL)
 	{
-		fprintf(stderr, "L%d stack not found\n", nline);
+		fprintf(stderr, "L%d: stack not found\n", nline);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));
@@ -55,7 +55,7 @@ void freeStack(stack_t **stack)
 	{
 		return;
 	}
-	while (stack != NULL)
+	while (*stack != NULL)
 	{
 		temp = (*stack)->next;
 		free(*stack);
