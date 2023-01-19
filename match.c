@@ -8,7 +8,7 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", pint}
+		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", addop},
@@ -19,12 +19,13 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 		{"nop", nop},
 		{"pchar", pchar},
 		{"pstr", pstr},
-		{"rot1", rotlop},
+		{"rotl", rotlop},
 		{"rotr", rotrop},
 		{"stack", addst},
 		{"queue", addqu},
 		{NULL, NULL}
 	};
+
 	if (commentCheck(line))
 	{
 		return (nop);
