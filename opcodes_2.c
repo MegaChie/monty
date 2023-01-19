@@ -107,30 +107,21 @@ void pchar(stack_t **stack, unsigned int nline)
  * @stack: struct double pointer
  * @nline: unsigned integer variable
  */
-void pstr(stack_t **stack, unsigned int nline)
+void pstr(stack_t **stack, unsigned int line_number)
 {
-	int index = 0;
-	char result[] = "";
-	char c;
-	stack_t *temp;
+	stack_t *tmp = *stack;
+	int c = 0;
 
-	temp = *stack;
-	(void)nline;
-	while (temp)
+	(void)line_number;
+
+
+	while (tmp)
 	{
-		if (temp->n == 0)
-		{
+		c = tmp->n;
+		if (c == 0 || _isalpha(c) == 0)
 			break;
-		}
-		if (_isalpha(temp->n) == 0)
-		{
-			break;
-		}
-		c = temp->n;
-		printf("%c", c);
-		result[index] += c;
-		temp = temp->next;
-		index++;
+		putchar(c);
+		tmp = tmp->next;
 	}
-	printf("\n");
+	putchar('\n');
 }
