@@ -49,7 +49,7 @@ bool argumentCheck(char *token)
  */
 void pushCheck(line_t line, meta_t *meta, char *opcode)
 {
-	if ((strcmp(opcode, "push") == 0) && !argument_check(line.content[1]))
+	if ((strcmp(opcode, "push") == 0) && !argumentCheck(line.content[1]))
 	{
 		free(line.content);
 		fprintf(stderr, "L%d: usage: push integer\n", line.number);
