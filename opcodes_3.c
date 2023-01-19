@@ -7,10 +7,11 @@
 void rotl(stack_t **stack, unsigned int nline)
 {
 	stack_t *runner = *stack;
+
+
 	int aux1 = 0;
 
-	if (nline == NULL || stack == NULL || *stack == NULL ||
-		(*stack)->next == NULL)
+	if (!nline || !stack || !*stack || !(*stack)->next)
 	{
 		return;
 	}
