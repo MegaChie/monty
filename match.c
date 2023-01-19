@@ -45,13 +45,12 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 			free(line.content);
 			return (ops[count].f);
 		}
-
 		count++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line.number,
 	line.content[0]);
 	free(line.content);
-	free(meta->bufffer);
+	free(meta->buffer);
 	freeStack(&(meta->stack));
 	fclose(meta->file);
 	free(meta);
