@@ -2,7 +2,7 @@
 /**
  * 
  */
-void pint (stack_t **stack, unsigned int nline)
+void pint(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
 
@@ -26,7 +26,7 @@ void pint (stack_t **stack, unsigned int nline)
 /**
  * 
  */
-void pop (stack_t **stack, unsigned int nline)
+void pop(stack_t **stack, unsigned int nline)
 {
 	if (stack == NULL || *stack == NULL)
 	{
@@ -53,14 +53,14 @@ void swap(stack_t **stack, unsigned int nline)
 {
 	int temp;
 
-	if (stack == NULL || *stack == NULL || !((*stack)->next))
-		{
-			fprintf(stderr, "L%d: can't swap, stack too short\n", nline);
-			exit(EXIT_FAILURE);
-		}
-		temp = (*stack)->n;
-		(*stack)->n = (*stack)->next->n;
-		(*stack)->next->n = temp;
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", nline);
+		exit(EXIT_FAILURE);
+	}
+	temp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = temp;
 }
 
 /**
@@ -117,7 +117,7 @@ void pstr(stack_t **stack, unsigned int nline)
 			break;
 		}
 		c = temp->n;
-		printf("%c\n", c);;
+		printf("%c", c);
 		result[index] += c;
 		temp = temp->next;
 		index++;
