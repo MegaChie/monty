@@ -2,7 +2,7 @@
 /**
  * pint - check code.
  * @stack: struct double pointer
- * nline: unsigned integer variable
+ * @nline: unsigned integer variable
  */
 void pint(stack_t **stack, unsigned int nline)
 {
@@ -28,7 +28,7 @@ void pint(stack_t **stack, unsigned int nline)
 /**
  * pop - check code.
  * @stack: struct double pointer
- * nline: unsigned integer variable
+ * @nline: unsigned integer variable
  */
 void pop(stack_t **stack, unsigned int nline)
 {
@@ -53,7 +53,7 @@ void pop(stack_t **stack, unsigned int nline)
 /**
  * swap - check code.
  * @stack: struct double pointer
- * nline: unsigned integer variable
+ * @nline: unsigned integer variable
  */
 void swap(stack_t **stack, unsigned int nline)
 {
@@ -72,7 +72,7 @@ void swap(stack_t **stack, unsigned int nline)
 /**
  * pchar - check code.
  * @stack: struct double pointer
- * nline: unsigned integer variable
+ * @nline: unsigned integer variable
  */
 void pchar(stack_t **stack, unsigned int nline)
 {
@@ -105,7 +105,7 @@ void pchar(stack_t **stack, unsigned int nline)
 /**
  * pstr - check code.
  * @stack: struct double pointer
- * nline: unsigned integer variable
+ * @nline: unsigned integer variable
  */
 void pstr(stack_t **stack, unsigned int nline)
 {
