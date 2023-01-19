@@ -1,6 +1,9 @@
 #include "monty.h"
 /**
- * 
+ * main - start here
+ * @argc: argument count (integer variable)
+ * @argv: argument vector (char pointer)
+ * Retuen: exit status
  */
 int main(int argc, char *argv[])
 {
