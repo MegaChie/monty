@@ -6,28 +6,24 @@
  */
 void rotl(stack_t **stack, unsigned int nline)
 {
-	stack_t *temp;
-	int holdThis, holdThisAgain;
-	(void)nline;
+	stack_t *runner = *stack;
+	int aux1 = 0;
 
-	if (stack == NULL || *stack == NULL)
+	if (nline == NULL || stack == NULL || *stack == NULL ||
+		(*stack)->next == NULL)
 	{
-		nop(stack, nline);
+		return;
 	}
-	holdThis = (*stack)->n;
-	temp = *stack;
-	while (temp)
+	aux1 = runner->n;
+
+	while (runner->next)
 	{
-		if (temp->next == NULL)
-		{
-			break;
-		}
-		temp = temp->next;
+		runner = runner->next;
+		runner->prev->n = runner->n;
 	}
-	holdThisAgain = temp->n;
-	(*stack)->n = holdThisAgain;
-	temp->n = holdThis;
+	runner->n = aux1;
 }
+
 
 /**
  * rotlop - check code.
