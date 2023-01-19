@@ -98,7 +98,7 @@ void rotl(stack_t **stack, unsigned int nline);
 void rotlop(stack_t **stack, unsigned int nline);
 void rotrop(stack_t **stack, unsigned int nline);
 void pchar(stack_t **stack, unsigned int nline);
-void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
+void pstr(stack_t **stack, unsigned int nline);
 void freeStack(stack_t **stack);
 void nop(stack_t **stack, unsigned int nline);
 void qpush(stack_t **stack, unsigned int nline);
