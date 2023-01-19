@@ -60,7 +60,7 @@ void rotrop(stack_t **stack, unsigned int nline)
 	stack_t *last, *temp;
 
 	(void)nline;
-	if (stack = NULL || *stack == NULL || (*stack)->next == NULL)
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		return;
 	}
