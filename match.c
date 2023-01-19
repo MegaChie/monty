@@ -36,24 +36,23 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 		{
 			pushCheck(line, meta, ops[count].opcode);
 			if (arg.flag == 1 &&
-				strcmp(ops[count].opcode, "push") == 0)
+			strcmp(ops[count].opcode, "push") == 0)
 			{
 				if (line.content)
-				{
 					free(line.content);
-				}
 				return (qpush);
 			}
 			free(line.content);
 			return (ops[count].f);
 		}
-		count++;
+
+		i++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line.number,
-		line.content[0]);
+	line.content[0]);
 	free(line.content);
-	free(meta->buf);
-	freeStack(&(meta->stack));
+	free(meta->bufffer);
+	free_stack(&(meta->stack));
 	fclose(meta->file);
 	free(meta);
 	exit(EXIT_FAILURE);
