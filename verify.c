@@ -54,7 +54,7 @@ void pushCheck(line_t line, meta_t *meta, char *opcode)
 		free(line.content);
 		fprintf(stderr, "L%d: usage: push integer\n", line.number);
 		free(meta->buffer);
-		free_stack(&(meta->stack));
+		freeStack(&(meta->stack));
 		fclose(meta->file);
 		free(meta);
 		exit(EXIT_FAILURE);
