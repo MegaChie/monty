@@ -8,12 +8,12 @@ void parseLine(line_t *line, char *buffer)
 	char *token = NULL;
 
 	line->content = malloc(sizeof(char *) * 3);
-	if (line->content == 0)
+	if (!line->content)
 	{
 		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(buffer, " '\n");
+	token = strtok(buffer, " '\n'");
 	for (count = 0; token && count < 2; count++)
 	{
 		line->content[count] = token;
@@ -41,11 +41,11 @@ void parseFile(FILE *file)
 	line.content = NULL;
 	meta->file = file;
 	meta->stack = NULL;
-	meta->buffer = NULL;
+	meta->buf = NULL;
 	while (getLine(&(meta->buffer), &size, meta->file) != -1)
 	{
-		line.number++
-		parseLine(&line, meta->buffer)
+		line.number++;
+		parseLine(&line, meta->buffer);
 		if (line.content)
 		{
 			get_op_func(line, meta)(&(meta->stack), line.number);
