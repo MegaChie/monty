@@ -6,7 +6,7 @@ arg_t arg = {0, 0};
  */
 bool commentCheck(line_t line)
 {
-	if (line.content[0] == NULL)
+	if (!line.content[0])
 	{
 		free(line.content);
 		return (true);
@@ -26,7 +26,7 @@ bool argumentCheck(char *token)
 {
 	unsigned int count;
 
-	if (token == NULL)
+	if (!token)
 	{
 		return (false);
 	}
@@ -49,18 +49,18 @@ bool argumentCheck(char *token)
  */
 void pushCheck(line_t line, meta_t *meta, char *opcode)
 {
-	if ((strcmp(opcode, "push") == 0) && argumentCheck(line.content[1]))
+	if ((strcmp(opcode, "push") == 0) && !argument_check(line.content[1]))
 	{
 		free(line.content);
 		fprintf(stderr, "L%d: usage: push integer\n", line.number);
 		free(meta->buffer);
-		freeStack(&(meta->stack));
+		free_stack(&(meta->stack));
 		fclose(meta->file);
 		free(meta);
 		exit(EXIT_FAILURE);
 	}
 	else if (strcmp(opcode, "push") == 0)
 	{
-		arg.arg = atio(line.content[1]);
+		arg.arg = atoi(line.content[1]);
 	}
 }
