@@ -1,6 +1,9 @@
 #include "monty.h"
 /**
- * 
+ * get_op_func - check code.
+ * @line: struct variable
+ * @meta: struct pointer
+ * Return: function's value or exit status
  */
 void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 {
