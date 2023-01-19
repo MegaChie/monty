@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- * 
+ * addop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void addop(stack_t **stack, unsigned int nline)
 {
@@ -19,7 +21,9 @@ void addop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * subop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void subop(stack_t **stack, unsigned int nline)
 {
@@ -38,7 +42,9 @@ void subop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * divop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void divop(stack_t **stack, unsigned int nline)
 {
@@ -62,7 +68,9 @@ void divop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * mulop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void mulop(stack_t **stack, unsigned int nline)
 {
@@ -81,7 +89,9 @@ void mulop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * modop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void modop(stack_t **stack, unsigned int nline)
 {
