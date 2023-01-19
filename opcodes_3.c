@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- * 
+ * rotl - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void rotl(stack_t **stack, unsigned int nline)
 {
@@ -28,7 +30,9 @@ void rotl(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * rotlop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void rotlop(stack_t **stack, unsigned int nline)
 {
@@ -53,7 +57,9 @@ void rotlop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * rotrop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void rotrop(stack_t **stack, unsigned int nline)
 {
@@ -78,7 +84,9 @@ void rotrop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * qpush - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void qpush(stack_t **stack, unsigned int nline)
 {
