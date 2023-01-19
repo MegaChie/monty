@@ -125,4 +125,3 @@ void pstr(stack_t **stack, unsigned int nline)
 	}
 	putchar('\n');
 }
-
