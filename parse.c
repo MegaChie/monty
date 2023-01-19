@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- * 
+ * parseLine - check  code.
+ * @line: struct pointer
+ * @buffer: char pointer
  */
 void parseLine(line_t *line, char *buffer)
 {
@@ -23,7 +25,8 @@ void parseLine(line_t *line, char *buffer)
 }
 
 /**
- * 
+ * parseFile - check code.
+ * @file: pointer
  */
 void parseFile(FILE *file)
 {
