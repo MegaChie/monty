@@ -113,13 +113,13 @@ void pstr(stack_t **stack, unsigned int nline)
 	int c = 0;
 
 	(void)nline;
+
+
 	while (tmp)
 	{
 		c = tmp->n;
 		if (c == 0 || _isalpha(c) == 0)
-		{
 			break;
-		}
 		putchar(c);
 		tmp = tmp->next;
 	}
