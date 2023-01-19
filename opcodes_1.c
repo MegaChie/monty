@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- * 
+ * push - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void push(stack_t **stack, unsigned int nline)
 {
@@ -29,7 +31,9 @@ void push(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * pall - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void pall(stack_t **stack, unsigned int nline)
 {
@@ -45,7 +49,9 @@ void pall(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * freeStack - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void freeStack(stack_t **stack)
 {
@@ -64,7 +70,9 @@ void freeStack(stack_t **stack)
 }
 
 /**
- * 
+ * nop - check code.
+ * @stack: struct double pointer
+ * @nline: unsigned integer variable
  */
 void nop(stack_t **stack, unsigned int nline)
 {
@@ -73,7 +81,8 @@ void nop(stack_t **stack, unsigned int nline)
 }
 
 /**
- * 
+ * _isalpha - check code.
+ * @c: integer variable
  */
 int _isalpha(int c)
 {
