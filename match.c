@@ -46,7 +46,7 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 			return (ops[count].f);
 		}
 
-		i++;
+		count++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line.number,
 	line.content[0]);
