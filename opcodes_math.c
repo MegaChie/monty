@@ -12,7 +12,7 @@ void addop(stack_t **stack, unsigned int nline)
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
-	(*stack)->next->n += (stack)->n;
+	(*stack)->next->n += (*stack)->n;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
 	free(temp);
@@ -32,7 +32,7 @@ void subop(stack_t **stack, unsigned int nline)
 	}
 	temp = *stack;
 	(*stack)->next->n -= (*stack)->n;
-	*stack = (*stack)->n`;
+	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
 	free(temp);
 }
@@ -67,6 +67,7 @@ void divop(stack_t **stack, unsigned int nline)
 void mulop(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", nline);
@@ -85,6 +86,7 @@ void mulop(stack_t **stack, unsigned int nline)
 void modop(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", nline);
