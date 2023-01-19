@@ -103,24 +103,34 @@ void pchar(stack_t **stack, unsigned int nline)
 }
 
 /**
- * f_pstr - check code.
+ * pstr - check code.
  * @stack: struct double pointer
  * @nline: unsigned integer variable
  */
-void f_pstr(stack_t **head, unsigned int nline)
+void pstr(stack_t **stack, unsigned int nline)
 {
-	stack_t *h;
-	(void)nline;
+	int index = 0;
+	char result[] = "";
+	char c;
+	stack_t *temp;
 
-	h = *head;
-	while (h)
+	temp = *stack;
+	(void)nline;
+	while (temp)
 	{
-		if (h->n > 127 || h->n <= 0)
+		if (temp->n == 0)
 		{
 			break;
 		}
-		printf("%c", h->n);
-		h = h->next;
+		if (_isalpha(temp->n) == 0)
+		{
+			break;
+		}
+		c = temp->n;
+		printf("%c", c);
+		result[index] += c;
+		temp = temp->next;
+		index++;
 	}
 	printf("\n");
 }
