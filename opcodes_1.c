@@ -51,7 +51,6 @@ void pall(stack_t **stack, unsigned int nline)
 /**
  * freeStack - check code.
  * @stack: struct double pointer
- * @nline: unsigned integer variable
  */
 void freeStack(stack_t **stack)
 {
@@ -83,6 +82,7 @@ void nop(stack_t **stack, unsigned int nline)
 /**
  * _isalpha - check code.
  * @c: integer variable
+ * Return: 1 or 0
  */
 int _isalpha(int c)
 {
