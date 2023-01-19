@@ -2,9 +2,7 @@
 /**
  * 
  */
-
-
-void rot1 (stack_t **stack , unsigned int nline)
+void rotl(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
 	int holdThis, holdThisAgain;
@@ -32,7 +30,7 @@ void rot1 (stack_t **stack , unsigned int nline)
 /**
  * 
  */
-void rollop(stack_t **stack, unsigned int nline)
+void rotlop(stack_t **stack, unsigned int nline)
 {
 	stack_t *last, *temp;
 
@@ -62,7 +60,7 @@ void rotrop(stack_t **stack, unsigned int nline)
 	stack_t *last, *temp;
 
 	(void)nline;
-	if (stack == NULL || *stack = NULL || (*stack)->next == NULL)
+	if (stack = NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		return;
 	}
@@ -72,7 +70,7 @@ void rotrop(stack_t **stack, unsigned int nline)
 	{
 		last = last->next;
 	}
-	last->prev-.next = NULL;
+	last->prev->next = NULL;
 	last->prev = NULL;
 	temp->prev = last;
 	last->next = temp;
