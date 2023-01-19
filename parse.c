@@ -42,7 +42,7 @@ void parseFile(FILE *file)
 	meta->file = file;
 	meta->stack = NULL;
 	meta->buffer = NULL;
-	while (getLine(&(meta->buffer), &size, meta->file) != -1)
+	while (getline(&(meta->buffer), &size, meta->file) != -1)
 	{
 		line.number++;
 		parseLine(&line, meta->buffer);
