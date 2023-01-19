@@ -52,7 +52,7 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 	line.content[0]);
 	free(line.content);
 	free(meta->bufffer);
-	free_stack(&(meta->stack));
+	freeStack(&(meta->stack));
 	fclose(meta->file);
 	free(meta);
 	exit(EXIT_FAILURE);
